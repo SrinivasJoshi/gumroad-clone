@@ -23,10 +23,6 @@ contract onShare{
         _USDCtoken = IERC20(_USDCtokenAddr);
     }
 
-    function yourBalance() public view returns(uint256){
-        return _USDCtoken.balanceOf(msg.sender);
-    }
-
     function doesUserOwnAsset(uint256 _assetId) public view returns(bool){
         return isUserOwned[_assetId][msg.sender];
     }
